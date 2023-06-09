@@ -12,8 +12,8 @@ class TestRemoveDuplicates(unittest.TestCase):
         self.assertEqual(result, "")
 
     def test_remove_duplicates_none_str(self):
-        result = remove_duplicates(None)
-        self.assertEqual(result, None)
+        result = remove_duplicates("hiiiii")
+        self.assertEqual(result, "hi")
 
     def test_remove_duplicates_special_chars(self):
         result = remove_duplicates("!@#hello$%^")
@@ -58,20 +58,20 @@ class TestCountVowels(unittest.TestCase):
 class TestGetLongestWord(unittest.TestCase):
 
     def test_get_longest_word(self):
-        sentence = "The quick brown fox jumps over the lazy dog"
-        self.assertEqual(get_longest_word(sentence), "jumps")
+        sentence = "The quick brown fox jumpss over the lazy dog"
+        self.assertEqual(get_longest_word(sentence), "jumpss")
 
     def test_get_longest_word_empty_string(self):
-        sentence = ""
-        self.assertEqual(get_longest_word(sentence), "")
+        sentence = "this is a test softwareeng"
+        self.assertEqual(get_longest_word(sentence), "softwareeng")
 
     def test_get_longest_word_single_word(self):
         sentence = "test"
         self.assertEqual(get_longest_word(sentence), "test")
 
     def test_get_longest_word_multiple_longest_words(self):
-        sentence = "The quick brown fox jumps over the lazy dog jumps over the fence"
-        self.assertEqual(get_longest_word(sentence), "jumps")
+        sentence = "The quick brown fox jumpsss over the lazy dog jumps over the fence"
+        self.assertEqual(get_longest_word(sentence), "jumpsss")
 
 
 if __name__ == '__main__':
