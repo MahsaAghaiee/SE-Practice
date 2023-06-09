@@ -1,5 +1,5 @@
 import unittest
-from main import remove_duplicates, concat_strings
+from main import remove_duplicates, concat_strings, get_longest_word, count_vowels
 
 class TestRemoveDuplicates(unittest.TestCase):
 
